@@ -1,0 +1,13 @@
+{
+  "function": "minecraft:sequence",
+  "functions": [
+    {
+      "function": "minecraft:set_components",
+      "components": {
+        "minecraft:custom_data": {
+          "ench_id": true
+        }
+      }
+    }
+  ]
+}

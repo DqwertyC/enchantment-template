@@ -1,0 +1,43 @@
+{
+  "criteria": {
+    "has_enchanted": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:enchantments": [
+                {
+                  "enchantments": "component_ench:ench_id"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "has_tagged": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "predicates": {
+              "minecraft:custom_data": {
+                "ench_id": true
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_enchanted",
+      "has_tagged"
+    ]
+  ],
+  "rewards": {
+    "function": "component_ench:scan_inventory"
+  }
+}
